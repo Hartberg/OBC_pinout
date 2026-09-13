@@ -1,4 +1,10 @@
-# OBC Controller Board Pinout
+# OBC IOC 
+
+
+This repo contains the IOC file for keeping track of the pinout for the MCU on the OBC. As well as to see what pins can be used for what.
+
+To view it open the file in CubeMX.
+
 
 The `Pinout` columns have the following meanings:
 
