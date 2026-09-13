@@ -151,30 +151,3 @@ The workbook includes 42 positions classified as power pins:
 | VDD33_USB | 1 |
 | PDR_ON | 1 |
 
-Use the exact package positions in `pinout.xlsx` when reviewing the schematic. This summary does not replace the power-supply, decoupling, analog-reference, USB-supply, or internal-regulator requirements in the microcontroller datasheet.
-
-## Updating the pinout
-
-1. Edit the `Pinout` sheet.
-2. Keep `Position` and `Name` aligned with the package pinout from the correct microcontroller datasheet.
-3. Put the active peripheral function in `Signal`.
-4. For a plain GPIO output, set `Signal` to `GPIO_Output` and put the schematic-facing name in `Label`.
-5. Confirm that peripheral selections match the correct `AF0`–`AF14` entry. Oscillator and other dedicated system functions may not appear in those columns.
-6. Check the new assignment against the schematic, firmware configuration, electrical requirements, and existing uses of the same peripheral signal.
-7. Regenerate or update `pinout CSV` so it remains an exact serialization of `Pinout`; the workbook contains no formulas that synchronize the sheets automatically.
-8. Record the board revision and describe the change in version control.
-
-## Recommended repository metadata
-
-Add the following details when known:
-
-- Microcontroller manufacturer and exact orderable part number
-- Package name and pin count
-- Board name and hardware revision
-- Schematic document and revision
-- Workbook owner and last review date
-- Firmware project or generated pin-configuration file
-- Connector-to-signal mapping
-- Logic levels, pull-ups, default output states, and active-high/active-low conventions
-
-
